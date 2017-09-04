@@ -31,10 +31,10 @@ func Load() {
 
 	// Backend Section
 	backend := Cfg.Section("backend." + Backend.Type)
-	Backend.Host = backend.Key("HOST").MustString("localhost:22")
+	Backend.Host = backend.Key("HOST").MustString("files.000webhost.com:21")
 
 	// Server Section
 	server := Cfg.Section("server." + Server.Type)
-	Server.Bind = server.Key("BIND").MustString("localhost:4000")
+	Server.Bind = server.Key("BIND").MustString("files.000webhost.com:4000")
 	Server.Statics = server.Key("STATICS").Strings(",")
 }
